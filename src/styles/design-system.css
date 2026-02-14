@@ -1,0 +1,250 @@
+/* Alloc8 Design System — Minimalistic urban interface */
+:root {
+  --bg-page: #F7F7F5;
+  --bg-panel: #ECECEC;
+  --text-primary: #1C1C1C;
+  --accent: #1E2A38;
+  --success: #5E8C61;
+  --risk: #C68A2B;
+  --danger: #B55252;
+  --text-muted: #5a5a5a;
+  --shadow-subtle: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-panel: 0 2px 8px rgba(0,0,0,0.04);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  --radius: 4px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.1rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: var(--bg-panel);
+  border-right: 1px solid rgba(0,0,0,0.06);
+  padding: 1.5rem 0;
+  flex-shrink: 0;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 0;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 0.6rem 1.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 13px;
+  transition: background var(--transition);
+}
+
+.sidebar-nav a:hover {
+  background: rgba(0,0,0,0.04);
+  text-decoration: none;
+}
+
+.sidebar-nav a.router-link-active {
+  background: rgba(30, 42, 56, 0.08);
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+  padding-left: calc(1.5rem - 3px);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  overflow: auto;
+}
+
+/* Cards & panels */
+.panel {
+  background: var(--bg-panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-panel);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-subtle);
+  padding: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity var(--transition), box-shadow var(--transition);
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 2px 8px rgba(30, 42, 56, 0.25);
+}
+
+.btn-secondary {
+  background: var(--bg-panel);
+  color: var(--text-primary);
+}
+
+.btn-success {
+  background: var(--success);
+  color: #fff;
+}
+
+/* Form */
+input, select, textarea {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--text-primary);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(30, 42, 56, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  font-size: 13px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+th {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Metrics */
+.metric-value {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.text-success { color: var(--success); }
+.text-risk { color: var(--risk); }
+.text-danger { color: var(--danger); }
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.35s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Number transition helper */
+.animate-number {
+  transition: transform 0.2s ease;
+}
