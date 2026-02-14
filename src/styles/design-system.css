@@ -1,18 +1,21 @@
-/* Alloc8 Design System — Minimalistic urban interface */
+/* Crescent Design System — Series B B2B SaaS */
 :root {
-  --bg-page: #F7F7F5;
-  --bg-panel: #ECECEC;
-  --text-primary: #1C1C1C;
-  --accent: #1E2A38;
-  --success: #5E8C61;
-  --risk: #C68A2B;
-  --danger: #B55252;
-  --text-muted: #5a5a5a;
-  --shadow-subtle: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-panel: 0 2px 8px rgba(0,0,0,0.04);
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
-  --radius: 4px;
-  --transition: 0.2s ease;
+  --bg-page: #F8FAFC;
+  --bg-panel: #FFFFFF;
+  --bg-panel-border: #E2E8F0;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --success: #059669;
+  --risk: #D97706;
+  --danger: #DC2626;
+  --text-muted: #64748B;
+  --shadow-subtle: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-panel: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --radius: 6px;
+  --transition: 0.15s ease;
 }
 
 * {
@@ -33,6 +36,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0 0 0.5em;
+  color: var(--text-primary);
 }
 
 h1 { font-size: 1.75rem; }
@@ -45,6 +49,7 @@ a {
 }
 
 a:hover {
+  color: var(--accent-hover);
   text-decoration: underline;
 }
 
@@ -57,7 +62,7 @@ a:hover {
 .sidebar {
   width: 220px;
   background: var(--bg-panel);
-  border-right: 1px solid rgba(0,0,0,0.06);
+  border-right: 1px solid var(--bg-panel-border);
   padding: 1.5rem 0;
   flex-shrink: 0;
 }
@@ -75,22 +80,24 @@ a:hover {
 .sidebar-nav a {
   display: block;
   padding: 0.6rem 1.5rem;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-weight: 500;
   font-size: 13px;
-  transition: background var(--transition);
+  transition: background var(--transition), color var(--transition);
 }
 
 .sidebar-nav a:hover {
-  background: rgba(0,0,0,0.04);
+  background: #F1F5F9;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
 .sidebar-nav a.router-link-active {
-  background: rgba(30, 42, 56, 0.08);
+  background: #EFF6FF;
   color: var(--accent);
   border-left: 3px solid var(--accent);
   padding-left: calc(1.5rem - 3px);
+  text-decoration: none;
 }
 
 .main-content {
@@ -102,6 +109,7 @@ a:hover {
 /* Cards & panels */
 .panel {
   background: var(--bg-panel);
+  border: 1px solid var(--bg-panel-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-panel);
   padding: 1.25rem 1.5rem;
@@ -109,8 +117,8 @@ a:hover {
 }
 
 .card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
+  background: var(--bg-panel);
+  border: 1px solid var(--bg-panel-border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-subtle);
   padding: 1.25rem;
@@ -129,11 +137,11 @@ a:hover {
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
-  transition: opacity var(--transition), box-shadow var(--transition);
+  transition: background var(--transition), box-shadow var(--transition), opacity var(--transition);
 }
 
 .btn:hover {
-  opacity: 0.92;
+  opacity: 0.95;
 }
 
 .btn-primary {
@@ -142,12 +150,19 @@ a:hover {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 2px 8px rgba(30, 42, 56, 0.25);
+  background: var(--accent-hover);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
   background: var(--bg-panel);
   color: var(--text-primary);
+  border: 1px solid var(--bg-panel-border);
+}
+
+.btn-secondary:hover {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
 }
 
 .btn-success {
@@ -160,7 +175,7 @@ input, select, textarea {
   font-family: var(--font-sans);
   font-size: 14px;
   padding: 0.55rem 0.75rem;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid var(--bg-panel-border);
   border-radius: var(--radius);
   background: #fff;
   color: var(--text-primary);
@@ -169,7 +184,7 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(30, 42, 56, 0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 label {
@@ -177,6 +192,7 @@ label {
   font-weight: 500;
   margin-bottom: 0.35rem;
   font-size: 13px;
+  color: var(--text-secondary);
 }
 
 .form-group {
@@ -197,7 +213,7 @@ table {
 th, td {
   padding: 0.75rem 1rem;
   text-align: left;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid var(--bg-panel-border);
 }
 
 th {
@@ -213,6 +229,7 @@ th {
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 
 .metric-label {

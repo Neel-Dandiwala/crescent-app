@@ -1,7 +1,7 @@
 <template>
   <div :class="layoutClass">
     <aside v-if="showSidebar" class="sidebar">
-      <div class="sidebar-brand">Alloc8</div>
+      <div class="sidebar-brand">Crescent</div>
       <nav>
         <ul class="sidebar-nav">
           <li><router-link to="/dashboard">Dashboard</router-link></li>

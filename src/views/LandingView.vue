@@ -1,16 +1,16 @@
 <template>
   <div class="landing">
     <header class="landing-header">
-      <div class="landing-logo">Alloc8</div>
+      <div class="landing-logo">Crescent</div>
       <nav class="landing-nav">
-        <router-link to="/signup" class="btn btn-primary">Start Simulation</router-link>
+        <router-link to="/signup" class="btn btn-primary">Get started</router-link>
       </nav>
     </header>
 
     <section class="hero">
-      <h1 class="hero-headline">Stop guessing which creators convert.</h1>
-      <p class="hero-subtext">Simulate revenue impact before you spend a single dollar.</p>
-      <router-link to="/signup" class="btn btn-primary btn-hero">Start Simulation</router-link>
+      <h1 class="hero-headline">Predict creator ROI before you spend.</h1>
+      <p class="hero-subtext">Model revenue and ROAS across creators and budgets. Built for marketing and growth teams.</p>
+      <router-link to="/signup" class="btn btn-primary btn-hero">Get started</router-link>
       <div class="hero-visual">
         <div class="dashboard-preview">
           <div class="preview-card">
@@ -34,15 +34,15 @@
       </div>
       <div class="demo-reel">
         <div class="demo-reel-inner">
-          <div class="demo-placeholder">UI demo — Simulate before you spend.</div>
+          <div class="demo-placeholder">Crescent — Simulate ROAS and allocation before you spend.</div>
         </div>
       </div>
     </section>
 
     <section class="tagline-bar">
       <p>Allocate marketing capital with precision.</p>
-      <p>Turn creator marketing into an asset class.</p>
-      <p>Replace guesswork with probability.</p>
+      <p>Data-driven creator and budget planning.</p>
+      <p>Trusted by growth and performance teams.</p>
     </section>
 
     <footer class="landing-footer">
@@ -83,7 +83,7 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 2.5rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid var(--bg-panel-border);
 }
 .landing-logo {
   font-weight: 700;
@@ -138,7 +138,7 @@ onMounted(() => {
 .preview-roas {
   font-weight: 700;
   font-size: 2rem;
-  color: var(--success);
+  color: var(--accent);
 }
 .preview-chart {
   display: flex;

@@ -1,8 +1,8 @@
-# Alloc8
+# Crescent
 
 **Simulate ROI before you spend.**
 
-Alloc8 is a decision engine that helps DTC brands simulate the expected ROAS of creator + ad budget combinations before spending money.
+Crescent is a decision engine that helps DTC brands simulate the expected ROAS of creator + ad budget combinations before spending money.
 
 ## Quick start
 
@@ -28,9 +28,9 @@ All data is mocked in the frontend; no backend server required.
 
 ## Design
 
-- Off-white `#F7F7F5`, panels `#ECECEC`, text `#1C1C1C`, accent `#1E2A38`  
-- Success / Risk / Danger: `#5E8C61`, `#C68A2B`, `#B55252`  
-- Inter, minimal, subtle shadows, soft transitions  
+- Series B B2B SaaS: light slate background `#F8FAFC`, white panels, primary blue `#2563EB`, text `#0F172A`  
+- Success / Warning / Danger: `#059669`, `#D97706`, `#DC2626`  
+- Inter, minimal, clean borders and subtle shadows  
 
 ## Tech
 

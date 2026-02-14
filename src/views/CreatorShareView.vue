@@ -1,7 +1,7 @@
 <template>
   <div class="creator-share">
     <header class="share-header">
-      <div class="share-logo">Alloc8</div>
+      <div class="share-logo">Crescent</div>
       <span class="share-badge">Creator insight — read only</span>
     </header>
 
@@ -33,7 +33,7 @@
         <p>{{ data.messagingDirection }}</p>
       </div>
 
-      <p class="tagline-footer">Allocate marketing capital with precision. Simulate before you spend.</p>
+      <p class="tagline-footer">Crescent — allocate marketing capital with precision.</p>
     </div>
 
     <div v-else class="share-container">
@@ -69,7 +69,7 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 2.5rem;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid var(--bg-panel-border);
 }
 .share-logo {
   font-weight: 700;

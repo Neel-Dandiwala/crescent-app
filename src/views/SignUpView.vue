@@ -1,7 +1,7 @@
 <template>
   <div class="signup-page">
     <header class="signup-header">
-      <router-link to="/" class="signup-logo">Alloc8</router-link>
+      <router-link to="/" class="signup-logo">Crescent</router-link>
     </header>
     <div class="signup-container">
       <h1>Set up your brand</h1>
@@ -81,6 +81,7 @@ async function submit() {
 }
 .signup-form {
   background: var(--bg-panel);
+  border: 1px solid var(--bg-panel-border);
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow-panel);
